@@ -72,7 +72,7 @@ describe(" part four", function() {
         expect(garage.add("Taco")).toEqual("Only vehicles are allowed in here!");
         garage.add(new Motorcycle("Honda", "Nighthawk", 2000));
         expect(garage.vehicles.length).toEqual(2);
-        garage.add(new Motorcycle("Honda", "Nighthawk", 2001));
+        expect(garage.add(new Motorcycle("Honda", "Nighthawk", 2001))).toEqual("Sorry, we’re full");
         expect(garage.vehicles.length).toEqual(2);
     })
 
